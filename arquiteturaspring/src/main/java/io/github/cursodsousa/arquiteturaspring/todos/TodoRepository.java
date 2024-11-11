@@ -5,5 +5,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface TodoRepository extends JpaRepository<TodoEntity, Integer> {
-    boolean existsByDescricao(String descricao);
+    boolean existsByDescricao(String descricao); //parecido com o findbyID
 }
+
+// Camada de persistencia

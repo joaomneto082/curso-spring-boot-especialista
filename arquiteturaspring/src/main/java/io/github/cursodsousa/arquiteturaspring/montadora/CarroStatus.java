@@ -1,4 +1,4 @@
 package io.github.cursodsousa.arquiteturaspring.montadora;
 
-public record CarroStatus(String mensagem) {
+public record CarroStatus(String mensagem) { //objetos de transição
 }

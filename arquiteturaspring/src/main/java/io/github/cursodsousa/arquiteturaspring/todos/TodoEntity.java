@@ -8,7 +8,7 @@ public class TodoEntity {
 
     @Id
     @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // campos auto incremento
     private Integer id;
 
     @Column(name = "descricao")
@@ -41,3 +41,7 @@ public class TodoEntity {
         this.concluido = concluido;
     }
 }
+
+// onde fica os dados
+
+// h2, junto com o start JPA já cria um banco se tiver uma entidade mapeada.

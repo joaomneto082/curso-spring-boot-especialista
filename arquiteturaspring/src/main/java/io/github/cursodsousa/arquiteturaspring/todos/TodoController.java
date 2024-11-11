@@ -16,7 +16,7 @@ public class TodoController {
     }
 
     @PostMapping
-    public TodoEntity salvar(@RequestBody TodoEntity todo){
+    public TodoEntity salvar(@RequestBody TodoEntity todo){ //requestparam é na URL e body no corpo da requisição
         try {
             return this.service.salvar(todo);
         }catch (IllegalArgumentException e){
@@ -37,3 +37,5 @@ public class TodoController {
         return service.buscarPorId(id);
     }
 }
+
+// controla a requisição

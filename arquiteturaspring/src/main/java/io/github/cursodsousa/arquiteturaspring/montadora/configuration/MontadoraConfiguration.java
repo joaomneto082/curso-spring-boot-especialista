@@ -7,10 +7,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Scope;
 
-@Configuration
+@Configuration // Definições de beans(Configurações)
 public class MontadoraConfiguration {
 
-    @Bean(name = "motorAspirado")
+    @Bean(name = "motorAspirado") // nome da bean de configuração para chamar na classe TesteFabrica
     @Scope("singleton")
     public Motor motorAspirado(){
         var motor = new Motor();
@@ -33,7 +33,7 @@ public class MontadoraConfiguration {
         return motor;
     }
 
-    @Primary
+    @Primary // diz que é o bean primario
     @Bean(name = "motorTurbo")
     public Motor motorTurbo(){
         var motor = new Motor();
