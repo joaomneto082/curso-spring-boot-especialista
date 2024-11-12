@@ -35,9 +35,9 @@ public class Application {
 		System.out.println("Nome da aplicação: " + applicationName);
 
 		ExemploValue value = applicationContext.getBean(ExemploValue.class);
-		value.imprimirVarivel();
+		value.imprimirVarivel(); // imprimir o valor setado no application.yml
 
-		AppProperties properties = applicationContext.getBean(AppProperties.class);
+		AppProperties properties = applicationContext.getBean(AppProperties.class); //pegar do yml e da classe AppProperties
 		System.out.println(properties.getValor1());
 
 	}

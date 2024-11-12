@@ -26,6 +26,7 @@ public class ExemploInjecaoDependencia {
 
         TodoService todoService = new TodoService(repository, todoValidator, sender);
 
+// Vantagem de utilizar injeção de depedencia
 
 //        BeanGerenciado beanGerenciado = new BeanGerenciado(null);
 //        beanGerenciado.setValidator(todoValidator);

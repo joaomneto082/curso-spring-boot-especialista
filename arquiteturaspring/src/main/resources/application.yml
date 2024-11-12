@@ -12,3 +12,6 @@ app:
   config:
     variavel: valor da variavel X
     valor1: 500
+
+
+# não pode utilizar as duas extensões, é preciso escolher: (application.properties ou application.yml)

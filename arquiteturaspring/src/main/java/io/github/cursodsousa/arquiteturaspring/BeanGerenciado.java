@@ -9,7 +9,10 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.WebApplicationContext;
 
-//@Lazy(false)
+
+// beans são instancias de componentes
+// o escopo padrão é singleton (uma instancia unica vai atender a toda a aplicação)
+//@Lazy(false)   //só vai carregar quando precisar
 @Component
 @Scope(BeanDefinition.SCOPE_SINGLETON)
 //@Scope(WebApplicationContext.SCOPE_APPLICATION)
@@ -23,7 +26,7 @@ public class BeanGerenciado {
     @Autowired
     private TodoValidator validator;
 
-    @Autowired
+    @Autowired // O spring prefere que se use o construtor, mais recomendado.
     public BeanGerenciado(TodoValidator validator) {
         this.validator = validator;
     }
@@ -34,7 +37,8 @@ public class BeanGerenciado {
     }
 
     @Autowired
-    public void setValidator(TodoValidator validator){
+    public void setValidator(TodoValidator validator){   //ALT + ENTER - vai indicar como preencher o campo
         this.validator = validator;
+        ;
     }
 }

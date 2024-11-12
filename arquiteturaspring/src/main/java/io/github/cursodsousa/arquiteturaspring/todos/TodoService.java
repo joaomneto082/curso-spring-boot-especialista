@@ -1,6 +1,9 @@
 package io.github.cursodsousa.arquiteturaspring.todos;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+// @Autowired vai injetar uma instancia dos beans no construtor. (Isso é uma injeção de dependecia)
 
 @Service
 public class TodoService {
